@@ -1,0 +1,32 @@
+.switchBox {
+    -fx-background-color: #2D2E33;
+}
+
+.switch {
+    -fx-pref-width: 40;
+}
+
+.switch .thumb {
+    -fx-pref-height: 7.5;
+    -fx-pref-width: 7.5;
+}
+
+.switch .track {
+    -fx-pref-height: 10;
+    -fx-background-color: rgb(45, 46, 51);
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.9), 10,0,0,0);
+}
+
+.switch .axis .axis-tick-mark {
+    -fx-stroke: black;
+    -fx-scale-y: 3;
+    -fx-translate-y: -9.5;
+}
+
+.switch:focused .thumb {
+    -fx-background-color: rgba(255, 0, 0, 0.75);
+}
+
+.switch .thumb {
+    -fx-background-color: grey;
+}

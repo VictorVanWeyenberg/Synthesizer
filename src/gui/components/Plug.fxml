@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" styleClass="plugBox" stylesheets="@plug.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <RadioButton fx:id="rdbPlug" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="14.0" styleClass="plug" stylesheets="@plug.css" text="RadioButton" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></RadioButton>
+      <Label fx:id="lblPlug" alignment="CENTER" text="Label" textFill="#808080">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,32 @@
+.popButton {
+    -fx-background-color: #2D2E33;
+}
+
+.popButton .popMenu {
+    -fx-background-color: #2D2E33;
+    -fx-position-shape: true;
+}
+
+.popButton .popMenu .menu-item {
+    -fx-background-color: #2D2E33;
+    -tx-text-fill: red;
+}
+
+.popButton .radio {
+    -fx-pref-width: 15;
+    -fx-pref-height: 15;
+    -fx-background-color: #2D2E33;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.65), 10, 0.5, 0, 0);
+    -fx-border-color: #6F6B6B;
+    -fx-border-style: solid centered line-cap round;
+    -fx-border-radius: 7;
+    -fx-border-width: 3;
+    -fx-translate-x: 7;
+}
+
+.popButton:selected .radio .dot {
+    -fx-background-color: red;
+    -fx-max-width: 10;
+    -fx-max-height: 10;
+    -fx-translate-y: -1;
+}

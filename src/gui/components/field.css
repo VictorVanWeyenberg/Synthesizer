@@ -1,0 +1,20 @@
+.field {
+    -fx-background-color: #2D2E33;
+}
+
+.fieldBound {
+    -fx-border-color: #BFC0C4;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+
+.fieldBound.selected {
+    -fx-border-color: #FF0000;
+}
+
+.fieldTitle {
+    -fx-background-color: #2D2E33;
+    -fx-text-fill: #BFC0C4;
+    -fx-translate-y: 5;
+    -fx-pref-height: 5;
+}
