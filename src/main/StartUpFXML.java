@@ -7,6 +7,7 @@ package main;
 
 import domein.Synth;
 import gui.MainPane;
+import gui.layers.Controller;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import java.util.logging.Level;
@@ -22,10 +23,8 @@ public class StartUpFXML extends Application {
 
     @Override
     public void start(Stage stage) {
-        Synth dc;
         try {
-            dc = new Synth();
-            MainPane mp = new MainPane(dc);
+            MainPane mp = Controller.mainPane;
             Scene scene = new Scene(mp);
             scene.focusOwnerProperty().addListener((obs, oldV, newV) -> {
                 mp.setFocusOwner(newV);

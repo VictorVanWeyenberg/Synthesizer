@@ -8,13 +8,7 @@
 
 package gui.circuits;
 
-import com.jsyn.unitgen.PinkNoise;
-import com.jsyn.unitgen.UnitGenerator;
-import com.jsyn.unitgen.WhiteNoise;
-import domein.Multiple;
-import domein.Synth;
-import domein.interfaces.Observer;
-import gui.components.Field;
+import domein.generators.Noise;
 import gui.components.Knob;
 import gui.components.Plug;
 
@@ -22,37 +16,25 @@ public class NoiseCircuit extends CircuitPane {
     
     private static int index = 0;
     
-    public NoiseCircuit(WhiteNoise noise, Observer observer, Synth synth) {
-        super(synth, observer, "WhiteNoise" + index++);
-        
-        field.add("amplitude", new Knob(noise.amplitude, synth), 0, 0);
-        
-        field.add("amplitudePlug", new Plug(observer, noise.amplitude, synth), 0, 1);
-        field.add("output", new Plug(observer, noise.output, synth), 1, 1);
-    }
+    private Plug brown, pink, red, white;
+    private Plug amplitude, frequency;
     
-    public NoiseCircuit(PinkNoise noise, Observer observer, Synth synth) {
-        super(synth, observer, "PinkNoise" + index++);
+    private Knob amplitudeKnob, frequencyKnob, dampingKnob;
+    
+    public NoiseCircuit(Noise noise) {
+        super("Noise" + index++);
         
-        field.add("amplitude", new Knob(noise.amplitude, synth), 0, 0);
+        add(amplitudeKnob = new Knob(noise.amplitude), 0, 0);
+        add(frequencyKnob = new Knob(noise.frequency), 1, 0);
+        add(dampingKnob = new Knob(noise.damping), 2, 0);
         
-        field.add("amplitudePlug", new Plug(observer, noise.amplitude, synth), 0, 1);
-        field.add("output", new Plug(observer, noise.output, synth), 1, 1);
-    }
-
-    @Override
-    public void addObserver(Observer observer) {
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers(Object e) {
-        observers.forEach(o -> o.update(e));
+        add(amplitude = new Plug(noise, noise.amplitude), 0, 1);
+        add(frequency = new Plug(noise, noise.frequency), 1, 1);
+        
+        add(brown = new Plug(noise, noise.brown), 0, 2);
+        add(pink = new Plug(noise, noise.pink), 1, 2);
+        add(red = new Plug(noise, noise.red), 2, 2);
+        add(white = new Plug(noise, noise.white), 3, 2);
     }
 
 }

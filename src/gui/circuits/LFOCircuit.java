@@ -5,15 +5,9 @@
  */
 package gui.circuits;
 
-import domein.LFO;
-import domein.Synth;
-import domein.enums.Wave;
-import domein.interfaces.Observer;
-import gui.MainPane;
-import gui.components.Field;
+import domein.generators.LFO;
 import gui.components.Knob;
 import gui.components.Plug;
-import gui.components.Switch;
 
 /**
  *
@@ -22,37 +16,26 @@ import gui.components.Switch;
 public class LFOCircuit extends CircuitPane {
 
     private Knob LFOFrequency, LFOAmount;
-    private Switch LFOWave;
-    private Plug LFOOutput;
+    private Plug LFOGate, LFOFreqOutPlug;
+    private Plug sine, triangle, square, saw, func;
 
     private static int index = 0;
 
-    public LFOCircuit(LFO lfo, Observer observer, Synth synth) {
+    public LFOCircuit(LFO lfo) {
         
-        super(synth, observer, "LFO" + String.valueOf(index++));
+        super("LFO" + String.valueOf(index++));
 
-        field.add("frequency", LFOFrequency = new Knob(lfo.frequency, 0, 20, synth), 0, 0);
-        field.add("amount", LFOAmount = new Knob(lfo.amount, 0, 1, synth), 1, 0);
+        add(LFOFrequency = new Knob(lfo.frequency, 0, 20), 0, 0);
+        add(LFOAmount = new Knob(lfo.amount, 0, 1), 1, 0);
         
-        field.add("wave", LFOWave = new Switch(Wave.values()), 0, 1);
+        add(LFOGate = new Plug(lfo, lfo.gateOut), 0, 1);
+        add(LFOFreqOutPlug = new Plug(lfo, lfo.freqOut), 0, 2);
         
-        field.add("outputplug", LFOOutput = new Plug(observer, lfo.output, ((MainPane)observer).getSynthesizer()), 0, 2);
-        LFOWave.valueProperty().addListener((obs, oldV, newV) -> lfo.setWave((Wave) newV));
-    }
-
-    @Override
-    public void addObserver(Observer observer) {
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers(Object e) {
-        observers.forEach(o -> o.update(e));
+        add(sine = new Plug(lfo, lfo.sineOut), 0, 2);
+        add(triangle = new Plug(lfo, lfo.triangleOut), 1, 2);
+        add(square = new Plug(lfo, lfo.squareOut), 2, 2);
+        add(saw = new Plug(lfo, lfo.sawOut), 3, 2);
+        add(func = new Plug(lfo, lfo.funcOut), 4, 2);
     }
 
 }

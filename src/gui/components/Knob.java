@@ -31,9 +31,8 @@ public class Knob extends VBox {
 
     private Double tick;
     private UnitInputPort port;
-    private Synth synth;
 
-    public Knob(UnitInputPort port, Synth synth) {
+    public Knob(UnitInputPort port) {
         FXMLLoader loader = new FXMLLoader();
 
         loader.setController(this);
@@ -47,14 +46,13 @@ public class Knob extends VBox {
         }
         
         this.port = port;
-        this.synth = synth;
         setText(port.getName());
         
         addListeners();
     }
 
-    public Knob(UnitInputPort port, double min, double max, Synth synth) {
-        this(port, synth);
+    public Knob(UnitInputPort port, double min, double max) {
+        this(port);
         setMin(min);
         setMax(max);
     }
@@ -106,7 +104,7 @@ public class Knob extends VBox {
 
         getValueProperty().addListener((obs, oldV, newV) -> {
             knob.rotateProperty().setValue(270 * ((double) newV / (knob.getMax() - knob.getMin())) - 135);
-            synth.set(port, newV.doubleValue());
+            port.set((double) newV);
         });
 
         knob.setOnKeyPressed(e -> e.consume());

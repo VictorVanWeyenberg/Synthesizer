@@ -8,38 +8,28 @@
 
 package gui.circuits;
 
-import domein.Multiple;
-import domein.Synth;
-import domein.interfaces.Observer;
-import gui.components.Field;
+import domein.generators.Multiple;
+import domein.enums.SwitchState;
+import gui.components.LED;
 import gui.components.Plug;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MultipleCircuit extends CircuitPane {
     
     private static int index = 0;
+    
+    private Multiple multiple;
 
-    public MultipleCircuit(Multiple multiple, Observer observer, Synth synth) {
-        super(synth, observer, "Multiple" + index++);
+    public MultipleCircuit(Multiple multiple) {
+        super("Multiple" + index++);
+        this.multiple = multiple;
         
         for (int i = 0; i < multiple.getNumPorts(); i++) {
-            field.add("input", new Plug(observer, multiple.inputPorts.get(i), synth), i, 0);
-            field.add("output", new Plug(observer, multiple.outputPorts.get(i), synth), i, 1);
+            buchla.add(new Plug(multiple, multiple.inputPorts.get(i)), 0, i);
+            buchla.add(new LED(SwitchState.values(), multiple.switchStates.get(i)), 1, i);
+            buchla.add(new Plug(multiple, multiple.outputPorts.get(i)), 2, i);
         }
-    }
-
-    @Override
-    public void addObserver(Observer observer) {
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers(Object e) {
-        observers.forEach(o -> o.update(e));
     }
 
 }

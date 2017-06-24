@@ -11,6 +11,6 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <RadioButton fx:id="checkbox" contentDisplay="CENTER" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="popButton" stylesheets="@popout.css" />
+      <CheckBox fx:id="checkbox" contentDisplay="CENTER" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="popButton" stylesheets="@popout.css" />
    </children>
 </AnchorPane>

@@ -5,14 +5,15 @@
  */
 package gui.circuits;
 
-import domein.Oscillator;
+import domein.generators.Oscillator;
 import domein.Synth;
 import domein.enums.Wave;
 import domein.interfaces.Observer;
-import gui.components.Field;
+import gui.components.Buchla;
 import gui.components.Knob;
 import gui.components.Plug;
 import gui.components.Switch;
+import java.lang.reflect.Field;
 
 /**
  *
@@ -21,40 +22,27 @@ import gui.components.Switch;
 public class OSCCircuit extends CircuitPane {
     
     private Knob OSCAmplitude, OSCFrequency;
-    private Switch OSCWave;
-    private Plug OSCAmplitudeInput, OSCFrequencyInput, OSCOutput;
+    private Plug OSCAmplitudeInput, OSCFrequencyInput, OSCFrequenctOutput;
+    private Plug sine, triangle, square, saw, func;
     
     private static int index = 0;
     
-    public OSCCircuit(Oscillator osc, Observer observer, Synth synth) {
+    public OSCCircuit(Oscillator osc) {
         
-        super(synth, observer, "OSC" + String.valueOf(index++));
+        super("OSC" + String.valueOf(index++));
         
-        field.add("amplitude", OSCAmplitude = new Knob(osc.amplitude, 0, 1, synth), 0, 0);
-        field.add("frequency", OSCFrequency = new Knob(osc.frequency, 20, 1000, synth), 1, 0);
+        add(OSCAmplitude = new Knob(osc.amplitude, 0, 1), 0, 0);
+        add(OSCFrequency = new Knob(osc.frequency, 20, 1000), 1, 0);
         
-        field.add("wave", OSCWave = new Switch(Wave.values()), 0, 1);
+        add(OSCAmplitudeInput = new Plug(osc, osc.amplitude), 0, 1);
+        add(OSCFrequencyInput = new Plug(osc, osc.frequency), 1, 1);
+        add(OSCFrequenctOutput = new Plug(osc, osc.freqOut), 2, 1);
         
-        field.add("amplitudePlug", OSCAmplitudeInput = new Plug(observer, osc.amplitude, synth), 0, 2);
-        field.add("frequencyPlug", OSCFrequencyInput = new Plug(observer, osc.frequency, synth), 1, 2);
-        field.add("outputPlug", OSCOutput = new Plug(observer, osc.output, synth), 2, 2);
-        
-        OSCWave.valueProperty().addListener((obs, oldV, newV) -> osc.setWave((Wave) newV));
-    }
-
-    @Override
-    public void addObserver(Observer observer) {
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers(Object e) {
-        observers.forEach(o -> o.update(e));
+        add(sine = new Plug(osc, osc.sineOut), 0, 2);
+        add(triangle = new Plug(osc, osc.triangleOut), 1, 2);
+        add(square = new Plug(osc, osc.squareOut), 2, 2);
+        add(saw = new Plug(osc, osc.sawOut), 3, 2);
+        add(func = new Plug(osc, osc.funcOut), 4, 2);
     }
     
 }

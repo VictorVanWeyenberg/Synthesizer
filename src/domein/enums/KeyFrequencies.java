@@ -11,19 +11,19 @@ package domein.enums;
  */
 public enum KeyFrequencies {
     
-    Q(0), 
-    Z(1), 
-    S(2), 
-    E(3), 
-    D(4), 
+    c(0), 
+    C$(1), 
+    D(2), 
+    D$(3), 
+    E(4), 
     F(5), 
-    T(6), 
+    F$(6), 
     G(7), 
-    Y(8), 
-    H(9), 
-    U(10), 
-    J(11), 
-    K(12);
+    G$(8), 
+    A(9), 
+    A$(10), 
+    B(11), 
+    C(12);
     
     private int pitch;
     
@@ -32,6 +32,6 @@ public enum KeyFrequencies {
     }
     
     public int pitch() {
-        return pitch + 60;
+        return pitch;
     }
 }

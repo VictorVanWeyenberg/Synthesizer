@@ -7,23 +7,25 @@
  */
 package gui.components;
 
-import domein.Synth;
+import domein.EnumContainingValue;
 import java.io.IOException;
 import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.CheckBox;
 import javafx.scene.layout.AnchorPane;
 
-public class LED extends AnchorPane {
+public class LED<E extends Enum<E>> extends AnchorPane {
     
     @FXML
-    private RadioButton checkbox;
+    private CheckBox checkbox;
+    private E[] values;
     
-    public BooleanProperty selectedProperty;
+    private EnumContainingValue ecv;
 
-    public LED(Synth synth) {
+    public LED(final E[] values, EnumContainingValue ecv) {
         FXMLLoader loader = new FXMLLoader();
 
         loader.setController(this);
@@ -36,7 +38,22 @@ public class LED extends AnchorPane {
             System.err.println("Failed to load Knob fxml file.");
         }
         
-        selectedProperty = checkbox.selectedProperty();
+        this.values = values;
+        this.ecv = ecv;
+        
+        checkbox.setText(null);
+        //checkbox.allowIndeterminateProperty();
+        addListeners();
+    }
+
+    private void addListeners() {
+        checkbox.selectedProperty().addListener((obs, oldV, newV) -> {
+            if (newV) {
+                ecv.setValue(values[0]);
+            } else {
+                ecv.setValue(values[1]);
+            }
+        });
     }
 
 }

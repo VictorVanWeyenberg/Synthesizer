@@ -19,19 +19,23 @@ package test;
 
 import com.jsyn.JSyn;
 import com.jsyn.Synthesizer;
+import com.jsyn.data.SegmentedEnvelope;
 import com.jsyn.devices.AudioDeviceFactory;
 import com.jsyn.devices.AudioDeviceInputStream;
 import com.jsyn.devices.AudioDeviceManager;
+import com.jsyn.ports.UnitInputPort;
+import com.jsyn.ports.UnitOutputPort;
 import com.jsyn.unitgen.EnvelopeDAHDSR;
 import com.jsyn.unitgen.LineOut;
 import com.jsyn.unitgen.SineOscillator;
 import com.jsyn.unitgen.SquareOscillator;
 import com.jsyn.unitgen.UnitVoice;
+import com.jsyn.unitgen.VariableRateMonoReader;
 import com.jsyn.util.VoiceAllocator;
 import com.softsynth.math.AudioMath;
 import com.softsynth.shared.time.TimeStamp;
-import domein.LFO;
-import domein.Oscillator;
+import domein.generators.LFO;
+import domein.generators.Oscillator;
 import domein.enums.Wave;
 import java.util.Scanner;
 import javafx.scene.layout.VBox;
@@ -49,8 +53,10 @@ public class test extends VBox {
     private LFO lfo, lfo2;
     private Oscillator sine, sine2, sine3;
     private SquareOscillator square, square2;
-    private EnvelopeDAHDSR env;
     private VoiceAllocator allocator;
+    
+    private SegmentedEnvelope env;
+    private VariableRateMonoReader player;
     
     private AudioDeviceManager mgr;
     
@@ -59,27 +65,8 @@ public class test extends VBox {
     public void start() {
         synth = JSyn.createSynthesizer();
         synth.add(lineOut = new LineOut());
-        
-        mgr = AudioDeviceFactory.createAudioDeviceManager();
-        AudioDeviceInputStream adis = null;
-        
-        for (int i = 0; i < mgr.getDeviceCount(); i++) {
-            System.out.println(mgr.getDeviceName(i));
-            if (mgr.getDeviceName(i).indexOf("Microphone") >= 0) {
-                adis = mgr.createInputStream(i, 24, mgr.getMaxOutputChannels(i));
-            }
-        }
-        
-        System.out.println(adis);
-        adis.start();
-        
-        while (true) {
-            try {
-                System.out.println(adis.read());
-            } catch (Exception e) {
-                
-            }
-        }
+        int indexMask = (1 << 16) - 1;
+        System.out.println(indexMask);
     }
 
     public void stop() {

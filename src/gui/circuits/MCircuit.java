@@ -9,7 +9,7 @@ import com.jsyn.unitgen.Multiply;
 import domein.Synth;
 import domein.interfaces.Observer;
 import gui.MainPane;
-import gui.components.Field;
+import gui.components.Buchla;
 import gui.components.Knob;
 import gui.components.Plug;
 
@@ -24,31 +24,16 @@ public class MCircuit extends CircuitPane {
 
     private static int index = 0;
 
-    public MCircuit(Multiply m, Observer observer, Synth synth) {
+    public MCircuit(Multiply m) {
         
-        super(synth, observer, "Multiply" + String.valueOf(index++));
+        super("Multiply" + String.valueOf(index++));
 
-        field.add("frequency", MInputA = new Knob(m.inputA, 20, 1000, synth), 0, 0);
-        field.add("resonance", MInputB = new Knob(m.inputB, 20, 1000, synth), 1, 0);
+        add(MInputA = new Knob(m.inputA, 20, 1000), 0, 0);
+        add(MInputB = new Knob(m.inputB, 20, 1000), 1, 0);
         
-        field.add("inputpluga", MInputAPlug = new Plug(observer, m.inputA, ((MainPane)observer).getSynthesizer()), 0, 1);
-        field.add("inputplugb", MInputBPlug = new Plug(observer, m.inputB, ((MainPane)observer).getSynthesizer()), 1, 1);
-        field.add("inputplug", MOutput = new Plug(observer, m.output, ((MainPane)observer).getSynthesizer()), 2, 1);
-    }
-
-    @Override
-    public void addObserver(Observer observer) {
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers(Object e) {
-        observers.forEach(o -> o.update(e));
+        add(MInputAPlug = new Plug(m, m.inputA), 0, 1);
+        add(MInputBPlug = new Plug(m, m.inputB), 1, 1);
+        add(MOutput = new Plug(m, m.output), 2, 1);
     }
     
 }
