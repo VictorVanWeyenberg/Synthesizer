@@ -1,0 +1,35 @@
+Repair Mults G C V
+Noise G C V
+    Brown G
+    Pink G
+    Red G
+    White G
+Extend context menu (create) V
+Switched Multiple (remake multiple) V
+Remove Input from Gate Sequencer V
+Uniquely rename all collected UnitPorts V
+Make one ENUM for circuit and generator factory + organize V
+Rapair Ramp? V
+LFO Frequency Out V
+
+Delay
+Repair Menu Accelerators
+Expand Custom Circuit
+Replace base frequency Plug on Sequencer by Knob
+Replace all ENUM values by EnumContainingValue
+Fix/Create Amplifier - output;
+Add, Subtract, Divide
+    *Offset
+LFO Square Gate length
+Rename (Remake) Gate / Trigger
+Triggerable switched multiple sequencer?
+Rename Amplitude / Frequency (Out)
+
+Modulation matrix?
+    Random Gate on GateSequencer
+    GateSequencer modes (only on/ only connected/ all/ )
+EnumValue class for Switch?
+
+
+WHENEVER YOU FEEL LIKE IT
+LAYOUT MAN!!!
