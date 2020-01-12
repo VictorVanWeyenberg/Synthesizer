@@ -9,7 +9,6 @@ package gui.layers;
 
 import com.jsyn.ports.UnitInputPort;
 import com.jsyn.ports.UnitOutputPort;
-import com.sun.deploy.util.ArrayUtil;
 import gui.MainPane;
 import gui.components.Connection;
 import gui.components.Plug;

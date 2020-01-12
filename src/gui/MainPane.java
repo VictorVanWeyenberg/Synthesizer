@@ -73,6 +73,7 @@ public class MainPane extends StackPane {
 
         this.setOnMousePressed(e -> {
             contextMenuHandler.handle(e);
+            e.consume();
         });
     }
 

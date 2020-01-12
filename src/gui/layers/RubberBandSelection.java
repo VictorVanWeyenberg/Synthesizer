@@ -120,8 +120,7 @@ public class RubberBandSelection {
             Iterator<Node> circuitIterator = circuits.getChildren().iterator();
             Iterator<Connection> connectionIterator = connections.getChildren().stream().map(c -> (Connection) c).iterator();
 
-            while (circuitIterator.hasNext() || connectionIterator.hasNext()) {
-
+            while (circuitIterator.hasNext()/* || connectionIterator.hasNext()*/) {
                 if (circuitIterator.hasNext()) {
                     Node node = circuitIterator.next();
                     if (node instanceof CircuitPane) {

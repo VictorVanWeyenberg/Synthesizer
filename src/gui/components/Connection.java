@@ -41,7 +41,6 @@ public class Connection extends Line implements Patchable {
                 }
             }
         });
-        
         update();
     }
     

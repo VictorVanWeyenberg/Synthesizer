@@ -46,6 +46,7 @@ public class ContextMenuHandler extends ContextMenu implements EventHandler<Mous
         } else {
             hide();
         }
+        event.consume();
     }
     
     private Menu initCreate() {
