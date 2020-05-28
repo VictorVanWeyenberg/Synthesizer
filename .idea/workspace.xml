@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="162f0f94-8184-40f5-a944-5e197ce98d41" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/domein/Synth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domein/Synth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domein/enums/GeneratorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domein/enums/GeneratorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/CircuitFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/CircuitFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/MainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/circuits/OSCCircuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/circuits/OSCCircuit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/circuits/OutputCircuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/circuits/OutputCircuit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/circuits/VCACircuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/circuits/VCACircuit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/components/Plug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/components/Plug.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/layers/MenuBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/layers/MenuBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/layers/PatchManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/layers/PatchManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/stages/MergeCircuitStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/stages/MergeCircuitStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/StartUpFXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/StartUpFXML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WImkMcJoU55UlqcPfXj0QXyhFl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+  </component>
+  <component name="RunManager" selected="Application.StartUpFXML">
+    <configuration name="StartUp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.StartUp" />
+      <module name="Synthesizer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartUpFXML" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="main.StartUpFXML" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StartUpFXML" />
+        <item itemvalue="Application.StartUp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="162f0f94-8184-40f5-a944-5e197ce98d41" name="Default Changelist" comment="" />
+      <created>1578845624590</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578845624590</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Fix 3 year old problem... FINALLY!!!">
+      <created>1578852641446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578852641446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix 3 year old problem... FINALLY!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix 3 year old problem... FINALLY!!!" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="635" y="98" width="635" height="769" key="#StartUpFXML" timestamp="1590684351842">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="635" y="98" width="635" height="769" key="#StartUpFXML/0.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590684351842" />
+    <state x="416" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590684428464">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="416" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590684428464" />
+    <state width="1878" height="270" key="GridCell.Tab.0.bottom" timestamp="1590683786386">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590683786386" />
+    <state width="1826" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1589459993415" />
+    <state width="1878" height="270" key="GridCell.Tab.0.center" timestamp="1590683786386">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="270" key="GridCell.Tab.0.center/0.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590683786386" />
+    <state width="1826" height="270" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1589459993415" />
+    <state width="1878" height="270" key="GridCell.Tab.0.left" timestamp="1590683786386">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="270" key="GridCell.Tab.0.left/0.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590683786386" />
+    <state width="1826" height="270" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1589459993414" />
+    <state width="1878" height="270" key="GridCell.Tab.0.right" timestamp="1590683786386">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="270" key="GridCell.Tab.0.right/0.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590683786386" />
+    <state width="1826" height="270" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1589459993415" />
+    <state width="1826" height="334" key="GridCell.Tab.1.bottom" timestamp="1587663939932">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1826" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587663939932" />
+    <state width="1826" height="334" key="GridCell.Tab.1.center" timestamp="1587663939932">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1826" height="334" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587663939932" />
+    <state width="1826" height="334" key="GridCell.Tab.1.left" timestamp="1587663939932">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1826" height="334" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587663939932" />
+    <state width="1826" height="334" key="GridCell.Tab.1.right" timestamp="1587663939932">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1826" height="334" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587663939932" />
+    <state x="721" y="233" width="467" height="544" key="RollbackChangesDialog" timestamp="1590683398495">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="721" y="233" width="467" height="544" key="RollbackChangesDialog/0.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590683398495" />
+    <state x="1113" y="231" key="com.intellij.ide.util.TipDialog" timestamp="1587661995355">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1113" y="231" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587661995355" />
+    <state x="643" y="258" width="634" height="512" key="find.popup" timestamp="1587663009154">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="643" y="258" width="634" height="512" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587663009154" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Synthesizer$StartUpFXML.ic" NAME="StartUpFXML Coverage Results" MODIFIED="1578846437649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>main.*</FILTER>
+    </SUITE>
+  </component>
+</project>
